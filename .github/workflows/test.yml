@@ -60,6 +60,8 @@ jobs:
            mv "$i" "$tagname"__"$i"
           done
           mv scripA.sql scriptAAA.sql
+        env:
+          tagname: v1.2
 
       # Runs a single command using the runners shell
       - name: Run ls finale
