@@ -41,7 +41,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run git tag
-        run: git tag
+        run: /usr/bin/git tag
         
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
