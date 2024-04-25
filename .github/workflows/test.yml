@@ -53,7 +53,8 @@ jobs:
           tagname=v1.2
           echo "tagname $tagname"
           readarray -t my_array < <(git diff-tree --no-commit-id --name-only -t $tagname)
-          echo ${my_array[@]}
+          echo "array: ${my_array[@]}"
+          echo "array size: ${#my_array[@]}"
           for i in "${my_array[@]}"
           do
            echo "$i $tagname"
