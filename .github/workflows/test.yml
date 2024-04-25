@@ -53,5 +53,9 @@ jobs:
           readarray -t my_array < <(git diff-tree --no-commit-id --name-only -t "$tagname")
           for i in "${my_array[@]}"
           do
-           echo "$tagname"__"$i"
+           mv "$i" "$tagname"__"$i"
           done
+
+      # Runs a single command using the runners shell
+      - name: Run ls finale
+        run: ls -a
