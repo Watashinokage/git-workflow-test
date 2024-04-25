@@ -51,7 +51,7 @@ jobs:
         run: |
           echo "multiline"
           tagname=v1.2
-          echo $tag_name
+          echo "tagname $tagname"
           readarray -t my_array < <(git diff-tree --no-commit-id --name-only -t $tagname)
           echo ${my_array[@]}
           for i in "${my_array[@]}"
