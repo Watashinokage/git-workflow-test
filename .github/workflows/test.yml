@@ -37,7 +37,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run ls
-        run: ls
+        run: ls -a
 
       # Runs a single command using the runners shell
       - name: Run git tag
